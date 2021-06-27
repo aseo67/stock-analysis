@@ -26,7 +26,7 @@ For "RUN", although they only achieved a return of ~5% in 2017, this has improve
 In the course of this analysis, the code was refactored from its original script to help optimize the runtime and alleviate burden of running this analysis on larger selections of stocks. 
 
   #### Pre-Refactor Code
-  Prior to the refactoring, the analysis was run then outputted, on a row-by-row (or stock-by-stock) basis. This resulted in runtimes ~0.5seconds.  
+  Prior to the refactoring, the analysis was run and outputted, on a row-by-row (or stock-by-stock) basis. This resulted in runtimes ~0.5seconds.  
   
   ![Screenshot](https://github.com/aseo67/stocks-analysis/blob/main/VBA_PreChallenge%20Refactor%20Code.png)
   
@@ -37,7 +37,7 @@ In the course of this analysis, the code was refactored from its original script
   ![Screenshot](https://github.com/aseo67/stocks-analysis/blob/main/VBA_PreChallenge%20Refactor_2018.png)
   
   #### Refactored Code
-  The code was then refactored to help optimize the calculation/output process by first collecting and storing all the array values, then outputting the stored data into the table. This resulted in runtimes ~0.1seconds, expediating the analysis considerably vs. the original script. 
+  The code was then refactored to help optimize the calculation/output process by first collecting and storing all the array values, then outputting the stored data into the output table once all data collection was finished. This resulted in runtimes ~0.1seconds, expediating the analysis considerably vs. the original script. 
   
   ![Screenshot](https://github.com/aseo67/stocks-analysis/blob/main/VBA_Challenge%20Refactored%20Code.png)
  
@@ -51,7 +51,8 @@ In the course of this analysis, the code was refactored from its original script
 ## Summary
 
 ### What are the advantages or disadvantages of refactoring code?
-
+By refactoring code, this can help save both runtime and boost performance, as the refactored code would provide a more efficient way to run the same analysis. The optimization should ideally simplify the code, while still conducting the same level of analytical rigor. Refactoring code can also help modify the script to better serve a business's changing needs (for example, allow for a larger set of analyses as the size of a dataset increases for a growing segment or industry).
+The disadvantages are that the refactoring process can consume a considerable amount of time, as care must be placed in making sure no bugs are introduced and analysis runs as smoothly as before, if not smoother. Depending on the scale of changes needed to be made, creating a new script may even be quicker than force-fitting a revision in to an older version of the code. 
 
 ### How do these pros and cons apply to refactoring the original VBA script?
-
+With the refactored VBA script, the main result was the optimization of the calculation process for the annual stock volume and return, as run times were expedited with nearly 5x quicker speed. While some time investment was needed to edit the code, it ultimately will help save time for future uses of this code to run stock analyses. As comes with refactoring of code, it was important to check for bugs and resolve them in this refactoring process to make sure the analysis ran properly as before. 
